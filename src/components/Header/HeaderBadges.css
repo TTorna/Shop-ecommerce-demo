@@ -1,0 +1,20 @@
+/* Need to add badge styles */
+.icon-btn {
+  position: relative;
+}
+
+.icon-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--color-error);
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,126 @@
+.hero-container {
+  position: relative;
+  height: calc(100vh - 120px);
+  min-height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 80px;
+}
+
+.hero-content {
+  color: var(--color-white);
+  max-width: 800px;
+  padding: 0 16px;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    padding: 0;
+  }
+  .hero-title {
+    font-size: 72px;
+  }
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 20px;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-main {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-btn-main {
+    width: auto;
+  }
+}
+
+.hero-btn-main:hover {
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btn-outline-white {
+    width: auto;
+  }
+}
+
+.btn-outline-white:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}

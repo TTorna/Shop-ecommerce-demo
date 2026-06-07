@@ -1,0 +1,422 @@
+.product-detail-container {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 992px) {
+  .product-detail-layout {
+    grid-template-columns: 1fr 400px;
+    gap: 80px;
+  }
+}
+
+/* Gallery Section */
+.product-gallery-adidas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 992px) {
+  .product-gallery-adidas {
+    flex-direction: row;
+    height: calc(100vh - 120px);
+    position: sticky;
+    top: 100px;
+  }
+}
+
+.thumbnails-column {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+@media (min-width: 992px) {
+  .thumbnails-column {
+    flex-direction: column;
+    width: 60px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+.thumbnail {
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-gray-100);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.thumbnail.active, .thumbnail:hover {
+  border-bottom-color: var(--color-black);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-image-container {
+  flex: 1;
+  background-color: var(--color-gray-100);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  overflow: hidden; /* Important for zoom */
+  padding: 24px; /* Makes the image smaller inside the container */
+}
+
+@media (min-width: 768px) {
+  .main-image-container {
+    min-height: 400px;
+    padding: 64px;
+  }
+}
+
+.detail-main-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.1s ease-out; /* Smooth follow */
+}
+
+.detail-main-image.zoomed {
+  transform: scale(2.5);
+  cursor: zoom-out;
+}
+
+.zoom-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-black);
+  transition: color 0.2s;
+  z-index: 10;
+}
+
+.zoom-btn:hover {
+  color: var(--color-brand);
+}
+
+.gallery-nav-btns {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.gallery-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--color-black);
+}
+
+.gallery-nav-btn:hover {
+  border-color: var(--color-black);
+}
+
+/* Info Section */
+.product-info-adidas {
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb-adidas {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: var(--color-black);
+}
+
+.breadcrumb-adidas a {
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.breadcrumb-adidas a:hover {
+  color: var(--color-brand);
+}
+
+.badge-inline-adidas {
+  display: inline-block;
+  background-color: var(--color-gray-200);
+  color: var(--color-black);
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.product-title-adidas {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .product-title-adidas {
+    font-size: 32px;
+  }
+}
+
+.product-price-adidas {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* Sizes */
+.sizes-section-adidas {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.section-title-adidas {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px; /* Increased separation */
+}
+
+.subsection-title-adidas {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-gray-900);
+}
+
+.sizes-grid-adidas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.sizes-grid-adidas.wholesale-grid {
+  grid-template-columns: 1fr; /* Full width buttons for long wholesale text */
+}
+
+.size-btn-adidas {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+}
+
+.size-btn-adidas:hover:not(:disabled) {
+  border-color: var(--color-black);
+}
+
+.size-btn-adidas.selected {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+
+.size-btn-adidas.out-of-stock {
+  color: var(--color-gray-300);
+  cursor: not-allowed;
+  position: relative;
+}
+
+.size-btn-adidas.out-of-stock::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top left, transparent 48%, var(--color-gray-200) 49%, var(--color-gray-200) 51%, transparent 52%);
+}
+
+.notify-icon-wrapper {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.notify-bell-icon {
+  width: 12px;
+  height: 12px;
+  color: var(--color-gray-300);
+}
+
+.size-guide-link-adidas {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 32px;
+  align-self: flex-start;
+  transition: color 0.2s;
+}
+
+.size-guide-link-adidas:hover {
+  color: var(--color-brand);
+}
+
+.info-box-adidas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--color-black);
+  padding: 16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.info-box-adidas .info-icon {
+  flex-shrink: 0;
+}
+
+.info-box-adidas strong {
+  font-weight: 700;
+}
+
+/* Actions */
+.actions-section-adidas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quantity-selector-adidas {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-gray-200);
+  width: max-content;
+}
+
+.quantity-selector-adidas button {
+  padding: 12px 16px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.quantity-selector-adidas button:hover {
+  background-color: var(--color-gray-100);
+}
+
+.quantity-selector-adidas span {
+  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.action-buttons-adidas {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-add-cart-wrapper {
+  flex: 1;
+  position: relative;
+  padding-bottom: 5px; /* Offset space */
+  padding-right: 5px;
+}
+
+.btn-add-cart-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 0;
+  bottom: 0;
+  border: 1px solid var(--color-black);
+  pointer-events: none;
+  transition: all 0.2s;
+}
+
+.btn-add-cart-adidas {
+  width: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-black);
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-add-cart-adidas:hover {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.btn-add-cart-wrapper:hover::after {
+  border-color: var(--color-brand);
+  top: 0;
+  left: 0;
+  right: 5px;
+  bottom: 5px;
+}
+
+.btn-wishlist-adidas {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-wishlist-adidas:hover {
+  border-color: var(--color-brand);
+}
