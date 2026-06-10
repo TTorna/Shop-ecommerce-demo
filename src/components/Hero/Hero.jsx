@@ -5,9 +5,9 @@ import './Hero.css';
 const Hero = () => {
   return (
     <div className="hero-container">
-      <img 
-        src="/hero.png" 
-        alt="Mozaiko Denim Collection" 
+      <img
+        src="/hero.png"
+        alt="Mozaiko Denim Collection"
         className="hero-image"
       />
       <div className="hero-overlay">
