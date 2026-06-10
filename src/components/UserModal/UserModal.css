@@ -1,0 +1,102 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--color-gray-300);
+  transition: var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  color: var(--color-black);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.modal-header h2 {
+  font-size: 28px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  transition: var(--transition-fast);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-black);
+}
+
+.modal-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-gray-300);
+}
+
+.text-link {
+  color: var(--color-black);
+  font-weight: 600;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 14px;
+}

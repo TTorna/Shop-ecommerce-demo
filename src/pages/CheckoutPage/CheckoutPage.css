@@ -1,0 +1,155 @@
+.checkout-container {
+  padding: 48px 16px 80px;
+}
+
+.checkout-title {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.checkout-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+@media (min-width: 992px) {
+  .checkout-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.checkout-form-section {
+  flex: 1;
+}
+
+.form-section {
+  margin-bottom: 40px;
+}
+
+.form-section h3 {
+  font-size: 18px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    flex-direction: row;
+  }
+  .form-row .form-group {
+    flex: 1;
+  }
+}
+
+.checkout-summary-section {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .checkout-summary-section {
+    width: 400px;
+    position: sticky;
+    top: 100px;
+  }
+}
+
+.summary-card {
+  background-color: var(--color-gray-100);
+  padding: 32px;
+}
+
+.summary-card h3 {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.summary-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.summary-item img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.summary-item-info h4 {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  text-transform: none;
+}
+
+.summary-item-info span {
+  font-size: 12px;
+  color: var(--color-gray-300);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.summary-item-price {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.summary-totals {
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: 24px;
+  margin-bottom: 32px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.total-row {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 0;
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: 24px;
+}
+
+.success-container, .empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;
+}
+
+.success-container h1 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.success-container p, .empty-container p {
+  color: var(--color-gray-300);
+  max-width: 500px;
+}
